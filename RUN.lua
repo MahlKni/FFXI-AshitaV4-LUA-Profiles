@@ -18,7 +18,7 @@ local sets = {
         Feet = 'Erilaz Greaves +2',
     },
 	Resting = {
-        
+        Ear1 = 'Relaxing earring',
         Ammo = 'Homiliary',
     },
 	Movement = {

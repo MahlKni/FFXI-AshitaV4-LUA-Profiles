@@ -52,6 +52,7 @@ local sets = {
         Neck = { Name = 'Jeweled Collar', Augment = { [1] = 'MND+3', [2] = 'MP recovered while healing +2' } },
       	Ammo = 'Homiliary',
 		Back = 'Felicitas cape +1',
+		Ear1 = 'Relaxing earring',
     },
 	Movement = {
         Feet = 'Herald\'s Gaiters',
