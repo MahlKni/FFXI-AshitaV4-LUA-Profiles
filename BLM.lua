@@ -59,7 +59,7 @@ local sets = {
         Back = { Name = 'Fi Follet Cape +1', AugPath='A' },
         Waist = 'Embla Sash',
         Feet = 'Regal Pumps +1',
-		}
+		},
 	Enfeebling = {
 	},
 		WS = {
