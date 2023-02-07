@@ -44,7 +44,7 @@ local sets = {
         Ring1 = 'Mallquis Ring',
         Ring2 = 'Jhakri Ring',
         Back = { Name = 'Bookworm\'s Cape', Augment = { [1] = 'Helix eff. dur. +18', [2] = 'INT+3' } },
-        Waist = 'Aswang Sash',
+        Waist = 'Hachirin-no-Obi',
         Legs = 'Arbatel Pants +2',
         Feet = 'Arbatel Loafers +2',
     },
@@ -140,6 +140,21 @@ local sets = {
         Back = { Name = 'Lugh\'s Cape', Augment = { [1] = '"Cure" potency +10%', [2] = 'Mag. Acc+20', [3] = 'MND+30', [4] = 'Magic Damage +20' } },
         Legs = 'Arbatel Pants +2',
     },
+	WS = {
+		Ear1 = { Name = 'Moonshade Earring', Augment = { [1] = 'TP Bonus +250', [2] = '"Mag. Atk. Bns."+4' } },
+		Neck = 'Fotia Gorget',
+		Ammo = 'Oshasha\'s Treatise',
+	},
+	WSMulti = {
+		Ear1 = { Name = 'Moonshade Earring', Augment = { [1] = 'TP Bonus +250', [2] = '"Mag. Atk. Bns."+4' } },
+		Neck = 'Fotia Gorget',
+		Ammo = 'Oshasha\'s Treatise',
+	},
+	WSMab = {
+		Ear1 = { Name = 'Moonshade Earring', Augment = { [1] = 'TP Bonus +250', [2] = '"Mag. Atk. Bns."+4' } },
+		Neck = 'Fotia Gorget',
+		Ammo = 'Oshasha\'s Treatise',
+	},
 };
 profile.Sets = sets;
 
@@ -242,6 +257,14 @@ profile.HandleMidshot = function()
 end
 
 profile.HandleWeaponskill = function()
+	local act = gData.GetAction();
+	if (act.Name == "Black Halo" or act.Name == "Realmrazer") then
+        gFunc.EquipSet(profile.Sets.WSMulti);
+    elseif (act.Name == "Brainshaker" or act.Name == "Skullbreaker" or act.Name == "Rock Crusher" or act.Name == "Omniscience" or act.Name == "Myrkr" or act.Name == "Shattersoul") then
+        gFunc.EquipSet(profile.Sets.WSMab);
+    else
+        gFunc.EquipSet(profile.Sets.WS);
+    end    
 end
 
 return profile;

@@ -13,7 +13,7 @@ local sets = {
         Ring1 = 'Mallquis Ring',
         Ring2 = 'Jhakri Ring',
         Back = { Name = 'Taranus\'s Cape', Augment = { [1] = 'Damage taken-5%', [2] = '"Mag. Atk. Bns."+10', [3] = 'Mag. Acc+20', [4] = 'INT+30', [5] = 'Magic Damage +20' } },
-        Waist = 'Aswang Sash',
+        Waist = 'Hachirin-no-Obi',
         Legs = 'Arch. Tonban +3',
         Feet = 'Wicce Sabots +2',
     },
@@ -62,9 +62,19 @@ local sets = {
 		}
 	Enfeebling = {
 	},
-	WS = {
+		WS = {
 		Ear1 = { Name = 'Moonshade Earring', Augment = { [1] = 'TP Bonus +250', [2] = '"Mag. Atk. Bns."+4' } },
-		Neck = 'Subtlety Spec.',
+		Neck = 'Fotia Gorget',
+		Ammo = 'Oshasha\'s Treatise',
+	},
+	WSMulti = {
+		Ear1 = { Name = 'Moonshade Earring', Augment = { [1] = 'TP Bonus +250', [2] = '"Mag. Atk. Bns."+4' } },
+		Neck = 'Fotia Gorget',
+		Ammo = 'Oshasha\'s Treatise',
+	},
+	WSMab = {
+		Ear1 = { Name = 'Moonshade Earring', Augment = { [1] = 'TP Bonus +250', [2] = '"Mag. Atk. Bns."+4' } },
+		Neck = 'Fotia Gorget',
 		Ammo = 'Oshasha\'s Treatise',
 	},
 	Sub = {
@@ -204,9 +214,9 @@ end
 
 profile.HandleWeaponskill = function()
 	local act = gData.GetAction();
-	if (act.Name == "Savage Blade" or act.Name == "Evisceration") then
+	if (act.Name == "Black Halo" or act.Name == "Realmrazer") then
         gFunc.EquipSet(profile.Sets.WSMulti);
-    elseif (act.Name == "Burning Blade" or act.Name == "Cyclone" or act.Name == "Aeolian Edge") then
+    elseif (act.Name == "Brainshaker" or act.Name == "Skullbreaker" or act.Name == "Rock Crusher" or act.Name == "Vidohunir" or act.Name == "Myrkr" or act.Name == "Shattersoul") then
         gFunc.EquipSet(profile.Sets.WSMab);
     else
         gFunc.EquipSet(profile.Sets.WS);

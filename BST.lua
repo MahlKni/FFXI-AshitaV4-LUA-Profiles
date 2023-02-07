@@ -39,7 +39,7 @@ profile.Sets = {
 		Back = { Name = 'Artio\'s Mantle', Augment = { [1] = 'Pet: M.Acc.+20', [2] = 'Pet: M.Dmg.+20', [3] = 'Mag. Acc+7', [4] = 'Weapon skill damage +10%', [5] = 'Magic Damage +7' } },
     },
     WS = {
-		Neck = 'Subtlety Spec.',
+		Neck = 'Fotia Gorget',
         Ear1 = { Name = 'Moonshade Earring', Augment = { [1] = 'TP Bonus +250', [2] = '"Mag. Atk. Bns."+4' } },
 		Legs = 'Meg. Chausses +2',
 		Hands = 'Meg. Gloves +2',
@@ -47,7 +47,7 @@ profile.Sets = {
 		Ammo = 'Oshasha\'s Treatise',
     },
     WSMulti = {
-		Neck = 'Subtlety Spec.',
+		Neck = 'Fotia Gorget',
 		Ear1 = { Name = 'Moonshade Earring', Augment = { [1] = 'TP Bonus +250', [2] = '"Mag. Atk. Bns."+4' } },
 		Legs = 'Meg. Chausses +2',
 		Waist = 'Dynamic Belt',
@@ -56,7 +56,7 @@ profile.Sets = {
 		Ammo = 'Oshasha\'s Treatise',
     },
     WSMab = {
-		Neck = 'Subtlety Spec.',
+		Neck = 'Fotia Gorget',
 		Ear1 = { Name = 'Moonshade Earring', Augment = { [1] = 'TP Bonus +250', [2] = '"Mag. Atk. Bns."+4' } },
 		Ear2 = 'Friomisi Earring',
 		Back = { Name = 'Artio\'s Mantle', Augment = { [1] = 'Pet: M.Acc.+20', [2] = 'Pet: M.Dmg.+20', [3] = 'Mag. Acc+7', [4] = 'Weapon skill damage +10%', [5] = 'Magic Damage +7' } },
