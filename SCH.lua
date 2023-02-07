@@ -155,7 +155,6 @@ profile.OnLoad = function()
 	AshitaCore:GetChatManager():QueueCommand(1, '/lockstyleset 12');
 	coroutine.sleep(0.5);
 	AshitaCore:GetChatManager():QueueCommand(1, '/sl blink');
-	coroutine.sleep(1);
 	end):once(1); --This calls the function after 1 second
 end
 
