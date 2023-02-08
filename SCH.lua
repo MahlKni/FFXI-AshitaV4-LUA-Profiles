@@ -31,7 +31,7 @@ local sets = {
         Legs = 'Mallquis Trews +2',
         Feet = 'Acad. Loafers +1',
     },
-    ['Nuke'] = {
+    Nuke = {
         Main = { Name = 'Septoptic +1', AugPath='A' },
         Sub = 'Culminus',
         Ammo = { Name = 'Ghastly Tathlum +1', AugPath='A' },
@@ -70,7 +70,7 @@ local sets = {
         Ring1 = 'Jhakri Ring',
         Ring2 = 'Lebeche ring',
         Back = { Name = 'Lugh\'s Cape', Augment = { [1] = '"Cure" potency +10%', [2] = 'Mag. Acc+20', [3] = 'MND+30', [4] = 'Magic Damage +20' } }, 
-        Waist = 'Embla Sash',
+        Waist = 'Hachirin-no-Obi',
         Legs = 'Arbatel Pants +2',
         Feet = 'Arbatel Loafers +2',
     },
@@ -144,16 +144,19 @@ local sets = {
 		Ear1 = { Name = 'Moonshade Earring', Augment = { [1] = 'TP Bonus +250', [2] = '"Mag. Atk. Bns."+4' } },
 		Neck = 'Fotia Gorget',
 		Ammo = 'Oshasha\'s Treatise',
+		Waist = 'Fotia Belt',
 	},
 	WSMulti = {
 		Ear1 = { Name = 'Moonshade Earring', Augment = { [1] = 'TP Bonus +250', [2] = '"Mag. Atk. Bns."+4' } },
 		Neck = 'Fotia Gorget',
 		Ammo = 'Oshasha\'s Treatise',
+		Waist = 'Fotia Belt',
 	},
 	WSMab = {
 		Ear1 = { Name = 'Moonshade Earring', Augment = { [1] = 'TP Bonus +250', [2] = '"Mag. Atk. Bns."+4' } },
 		Neck = 'Fotia Gorget',
 		Ammo = 'Oshasha\'s Treatise',
+		Waist = 'Fotia Belt',
 	},
 };
 profile.Sets = sets;

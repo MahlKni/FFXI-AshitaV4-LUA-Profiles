@@ -66,16 +66,19 @@ local sets = {
 		Ear1 = { Name = 'Moonshade Earring', Augment = { [1] = 'TP Bonus +250', [2] = '"Mag. Atk. Bns."+4' } },
 		Neck = 'Fotia Gorget',
 		Ammo = 'Oshasha\'s Treatise',
+		Waist = 'Fotia Belt',
 	},
 	WSMulti = {
 		Ear1 = { Name = 'Moonshade Earring', Augment = { [1] = 'TP Bonus +250', [2] = '"Mag. Atk. Bns."+4' } },
 		Neck = 'Fotia Gorget',
 		Ammo = 'Oshasha\'s Treatise',
+		Waist = 'Fotia Belt',
 	},
 	WSMab = {
 		Ear1 = { Name = 'Moonshade Earring', Augment = { [1] = 'TP Bonus +250', [2] = '"Mag. Atk. Bns."+4' } },
 		Neck = 'Fotia Gorget',
 		Ammo = 'Oshasha\'s Treatise',
+		Waist = 'Fotia Belt',
 	},
 	Sub = {
 		Waist = 'Embla Sash',

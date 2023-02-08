@@ -14,7 +14,7 @@ local sets = {
         Ring2 = 'Rajas Ring',
         Back = { Name = 'Yokaze Mantle', Augment = { [1] = 'STR+5', [2] = 'Sklchn.dmg.+4%', [3] = 'DEX+1' } },
         Waist = 'Chiner\'s Belt +1',
-        Legs = { Name = 'Samnuha Tights', Augment = { [1] = 'STR+5', [2] = '"Triple Atk."+1', [3] = 'DEX+5' } },
+        Legs = 'Hattori Hakama +2',
         Feet = { Name = 'Tatena. Sune. +1', AugPath='A' },
     },
 	Burst = { 
@@ -43,6 +43,7 @@ local sets = {
 		Neck = 'Fotia Gorget',
 		Ammo = 'Oshasha\'s Treatise',
 		Feet = 'Hattori kyahan +2',
+		Waist = 'Fotia Belt',
 		},
 	WSMab = {
 		Head = { Name = 'Herculean Helm', Augment = { [1] = 'Weapon skill damage +6%', [2] = 'Rng.Acc.+21', [3] = 'CHR+10', [4] = 'Attack+3', [5] = 'Accuracy+3' } },
@@ -51,6 +52,7 @@ local sets = {
 		Neck = 'Fotia Gorget',
 		Ammo = 'Oshasha\'s Treatise',
 		Feet = 'Hattori kyahan +2',
+		Waist = 'Fotia Belt',
 		},
 	WS = {
 		Head = { Name = 'Herculean Helm', Augment = { [1] = 'Weapon skill damage +6%', [2] = 'Rng.Acc.+21', [3] = 'CHR+10', [4] = 'Attack+3', [5] = 'Accuracy+3' } },
@@ -59,6 +61,7 @@ local sets = {
 		Neck = 'Fotia Gorget',
 		Ammo = 'Oshasha\'s Treatise',
 		Feet = 'Hattori kyahan +2',
+		Waist = 'Fotia Belt',
 		},
 	TH = {
         Ammo = 'Per. Lucky Egg',

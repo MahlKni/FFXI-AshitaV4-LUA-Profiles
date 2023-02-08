@@ -33,18 +33,21 @@ local sets = {
 		Neck = 'Fotia Gorget',
 		Hands = 'Meg. Gloves +2',
 		Ammo = 'Oshasha\'s Treatise',
+		Waist = 'Fotia Belt',
 	},
 	WSMab = {
         Ear1 = { Name = 'Moonshade Earring', Augment = { [1] = 'TP Bonus +250', [2] = '"Mag. Atk. Bns."+4' } },
 		Neck = 'Fotia Gorget',
 		Ammo = 'Oshasha\'s Treatise',
         Hands = 'Meg. Gloves +2',
+		Waist = 'Fotia Belt',
         },
 	WS = {
 		Ear1 = { Name = 'Moonshade Earring', Augment = { [1] = 'TP Bonus +250', [2] = '"Mag. Atk. Bns."+4' } },
 		Neck = 'Fotia Gorget',
 		Ammo = 'Oshasha\'s Treatise',
 		Hands = 'Meg. Gloves +2',
+		Waist = 'Fotia Belt',
 	}
 };
 profile.Sets = sets;

@@ -36,6 +36,7 @@ local sets = {
 		Neck = 'Fotia Gorget',
 		Ear1 = { Name = 'Moonshade Earring', Augment = { [1] = 'TP Bonus +250', [2] = '"Mag. Atk. Bns."+4' }},
 		Hands = 'Meg. Gloves +2',
+		Waist = 'Fotia Belt',
 	},
 	WSMab = {
 		Head = { Name = 'Herculean Helm', Augment = { [1] = 'Weapon skill damage +6%', [2] = 'Rng.Acc.+21', [3] = 'CHR+10', [4] = 'Attack+3', [5] = 'Accuracy+3' } },
@@ -43,6 +44,7 @@ local sets = {
 		Ammo = 'Knobkierrie',
 		Ear1 = { Name = 'Moonshade Earring', Augment = { [1] = 'TP Bonus +250', [2] = '"Mag. Atk. Bns."+4' }},
 		Hands = 'Meg. Gloves +2',
+		Waist = 'Fotia Belt',
 	},
 	WS = {
 		Head = { Name = 'Herculean Helm', Augment = { [1] = 'Weapon skill damage +6%', [2] = 'Rng.Acc.+21', [3] = 'CHR+10', [4] = 'Attack+3', [5] = 'Accuracy+3' } },
@@ -50,6 +52,7 @@ local sets = {
 		Ammo = 'Knobkierrie',
 		Ear1 = { Name = 'Moonshade Earring', Augment = { [1] = 'TP Bonus +250', [2] = '"Mag. Atk. Bns."+4' } },
 		Hands = 'Meg. Gloves +2',
+		Waist = 'Fotia Belt',
 	},
 	
 	TH = {

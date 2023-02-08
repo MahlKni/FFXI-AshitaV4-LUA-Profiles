@@ -45,6 +45,7 @@ profile.Sets = {
 		Hands = 'Meg. Gloves +2',
 		Feet = { Name = 'Valorous Greaves', Augment = { [1] = 'Attack+11', [2] = 'Weapon skill damage +5%' } },
 		Ammo = 'Oshasha\'s Treatise',
+		Waist = 'Fotia Belt',
     },
     WSMulti = {
 		Neck = 'Fotia Gorget',
@@ -54,6 +55,7 @@ profile.Sets = {
 		Hands = 'Meg. Gloves +2',
 		Feet = { Name = 'Valorous Greaves', Augment = { [1] = 'Attack+11', [2] = 'Weapon skill damage +5%' } },
 		Ammo = 'Oshasha\'s Treatise',
+		Waist = 'Fotia Belt',
     },
     WSMab = {
 		Neck = 'Fotia Gorget',
@@ -64,6 +66,7 @@ profile.Sets = {
 		Hands = 'Meg. Gloves +2',
 		Feet = { Name = 'Valorous Greaves', Augment = { [1] = 'Attack+11', [2] = 'Weapon skill damage +5%' } },
 		Ammo = 'Oshasha\'s Treatise',
+		Waist = 'Fotia Belt',
     },
     Reward = {
 		Body = 'Totemic Jackcoat +1',
