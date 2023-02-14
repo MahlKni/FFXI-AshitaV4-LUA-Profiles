@@ -28,7 +28,7 @@ local sets = {
         Ring2 = 'Mallquis Ring',
         Back = { Name = 'Fi Follet Cape +1', AugPath='A' },
         Waist = 'Embla Sash',
-        Legs = 'Mallquis Trews +2',
+        Legs = 'Doyen pants',
         Feet = 'Acad. Loafers +1',
     },
     Nuke = {
@@ -84,7 +84,7 @@ local sets = {
 	},
 	Enhancing = {
         Main = { Name = 'Serenity', Augment = { [1] = '"Cure" spellcasting time -9%', [2] = 'Enha.mag. skill +8', [3] = 'MP+50', [4] = '"Cure" potency +3%' } },
-        Sub = 'Elder\'s Grip +1',
+        Sub = 'Tokko grip',
 		Head = { Name = 'Telchine Cap', Augment = 'Enh. Mag. eff. dur. +9' },
 		Waist = 'Embla Sash',
 		Hands = 'Arbatel Bracers +2',
@@ -93,6 +93,9 @@ local sets = {
         Legs = { Name = 'Telchine Braconi', Augment = 'Enh. Mag. eff. dur. +8' },
         Feet = { Name = 'Telchine Pigaches', Augment = 'Enh. Mag. eff. dur. +9' },
     },
+	Stoneskin = {
+		Waist = 'Siegel Sash',
+	},
 	Drain = {
         Main = { Name = 'Rubicundity', Augment = { [1] = 'Dark magic skill +1', [2] = '"Conserve MP"+2', [3] = 'Mag. Acc.+5' } },
         Sub = 'Culminus',
@@ -130,7 +133,7 @@ local sets = {
 	},
 	dt = {
         Main = 'Malignance Pole',
-        Sub = 'Elder\'s Grip +1',
+        Sub = 'Tokko grip',
         Head = 'Arbatel Bonnet +2',
         Neck = { Name = 'Loricate Torque +1', AugPath='A' },
         Body = 'Arbatel Gown +2',

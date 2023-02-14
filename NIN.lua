@@ -19,10 +19,11 @@ local sets = {
     },
 	Burst = { 
 		Ear1 = 'Friomisi earring',
+		Ear2 = 'Hermetic Earring',
 		Neck = 'Sibyl Scarf',
 		Ring1 = 'Mujin Band',
 		Body = 'Samnuha Coat',
-		Waist = 'Hachirin-no-Obi',
+		Waist = 'Eschan Stone',
 		Hands = 'Hattori tekko +2',
 		Feet = 'Hattori kyahan +2',
 		Ammo = 'Seeth. bomblet +1',

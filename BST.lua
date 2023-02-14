@@ -168,7 +168,7 @@ profile.HandleDefault = function()
     if (player.Status == 'Engaged') then
         gFunc.EquipSet(profile.Sets.Idle);
 		if (Settings.UseTH == true) then
-            gFunc.EquipSet(Sets.TH);
+            gFunc.EquipSet(profile.Sets.TH);
         end
 		elseif (player.Status == 'Resting') then
         gFunc.EquipSet(profile.Sets.Resting);
