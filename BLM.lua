@@ -93,7 +93,7 @@ local sets = {
 	Cure = {
 		Main = 'Daybreak',
         Sub = 'Sors Shield',
-		Neck = 'Phalaina Locket',
+		Neck = 'Nodens Gorget',
 		Head = { Name = 'Vanya Hood', AugPath='C' },
 		Ear1 = 'Static Earring',
 		Legs = 'Theurgist\'s Slacks',

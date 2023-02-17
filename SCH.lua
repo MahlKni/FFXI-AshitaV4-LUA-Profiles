@@ -94,6 +94,7 @@ local sets = {
         Feet = { Name = 'Telchine Pigaches', Augment = 'Enh. Mag. eff. dur. +9' },
     },
 	Stoneskin = {
+		Neck = 'Nodens Gorget',
 		Waist = 'Siegel Sash',
 	},
 	Drain = {
@@ -112,7 +113,7 @@ local sets = {
         Main = 'Daybreak',
         Sub = 'Sors Shield',
 		Head = { Name = 'Vanya Hood', AugPath='C' },
-        Neck = 'Phalaina Locket',
+        Neck = 'Nodens Gorget',
         Ear1 = 'Static Earring',
 		Ear2 = 'Mendi. Earring',
         Hands = { Name = 'Telchine Gloves', Augment = { [1] = '"Regen" potency+2', [2] = '"Cure" potency +7%' } },
