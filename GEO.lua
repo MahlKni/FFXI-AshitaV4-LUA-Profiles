@@ -69,6 +69,7 @@ local sets = {
         Main = { Name = 'Serenity', Augment = { [1] = '"Cure" spellcasting time -9%', [2] = 'Enha.mag. skill +8', [3] = 'MP+50', [4] = '"Cure" potency +3%' } },
         Sub = 'Tokko grip',
 		Head = { Name = 'Telchine Cap', Augment = 'Enh. Mag. eff. dur. +9' },
+		Neck = 'Incanter\'s Torque',
 		Waist = 'Embla Sash', 
 		Body = { Name = 'Chironic Doublet', Augment = { [1] = '"Mag. Atk. Bns."+17', [2] = 'Attack+20', [3] = 'Mag. Acc.+17', [4] = 'Weapon skill damage +1%', [5] = 'Phalanx +5', [6] = 'MND+3', [7] = 'Accuracy+20' } },
         Legs = { Name = 'Telchine Braconi', Augment = 'Enh. Mag. eff. dur. +8' },
@@ -103,7 +104,7 @@ local sets = {
     ['Geo'] = {
         Range = { Name = 'Dunna', AugPath='A' },
         Head = 'Azimuth Hood +2',
-        Neck = 'Deceiver\'s Torque',
+        Neck = 'Incanter\'s Torque',
         Ear2 = { Name = 'Azimuth Earring +1', Augment = { [1] = 'Damage taken-4%', [2] = 'Mag. Acc.+12' } },
         Body = { Name = 'Bagua Tunic +1', AugTrial=5331 },
         Hands = 'Geo. Mitaines +2',
