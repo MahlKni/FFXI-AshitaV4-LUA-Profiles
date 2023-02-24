@@ -12,7 +12,7 @@ local sets = {
         Hands = 'Geo. Mitaines +2',
         Ring1 = 'Jhakri Ring',
         Ring2 = 'Mallquis Ring',
-        Back = { Name = 'Fi Follet Cape +1', AugPath='A' },
+        Back = { Name = 'Lifestream Cape', Augment = { [1] = 'Pet: Damage taken -1%', [2] = 'Geomancy Skill +10', [3] = 'Indi. eff. dur. +15' } },
         Waist = 'Isa Belt',
         Legs = 'Mallquis Trews +2',
         Feet = 'Geo. Sandals +2',
@@ -100,6 +100,17 @@ local sets = {
 		Body = { Name = 'Chironic Doublet', Augment = { [1] = '"Mag. Atk. Bns."+17', [2] = 'Attack+20', [3] = 'Mag. Acc.+17', [4] = 'Weapon skill damage +1%', [5] = 'Phalanx +5', [6] = 'MND+3', [7] = 'Accuracy+20' } },
         Feet = { Name = 'Vanya Clogs', AugPath='C' },
     },
+    ['Geo'] = {
+        Range = { Name = 'Dunna', AugPath='A' },
+        Head = 'Azimuth Hood +2',
+        Neck = 'Deceiver\'s Torque',
+        Ear2 = { Name = 'Azimuth Earring +1', Augment = { [1] = 'Damage taken-4%', [2] = 'Mag. Acc.+12' } },
+        Body = { Name = 'Bagua Tunic +1', AugTrial=5331 },
+        Hands = 'Geo. Mitaines +2',
+        Legs = { Name = 'Bagua Pants', AugTrial=5223 },
+        Feet = 'Azimuth Gaiters +1',
+        Back = { Name = 'Lifestream Cape', Augment = { [1] = 'Pet: Damage taken -1%', [2] = 'Geomancy Skill +10', [3] = 'Indi. eff. dur. +15' } },
+    },
 };
 profile.Sets = sets;
 
@@ -178,6 +189,9 @@ end
 profile.HandleMidcast = function()
 	local spell = gData.GetAction();
 	
+	if (string.contains(spell.Name, 'Indi-') or string.contains(spell.Name, 'Geo-')) then
+		gFunc.EquipSet(sets.Geo);
+		end
 	if (spell.Skill == 'Healing Magic') then
         gFunc.EquipSet(sets.Cure);
         if string.match(spell.Name, 'Cursna') then
