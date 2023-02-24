@@ -107,10 +107,15 @@ local sets = {
         Ear2 = { Name = 'Azimuth Earring +1', Augment = { [1] = 'Damage taken-4%', [2] = 'Mag. Acc.+12' } },
         Body = { Name = 'Bagua Tunic +1', AugTrial=5331 },
         Hands = 'Geo. Mitaines +2',
-        Legs = { Name = 'Bagua Pants', AugTrial=5223 },
         Feet = 'Azimuth Gaiters +1',
         Back = { Name = 'Lifestream Cape', Augment = { [1] = 'Pet: Damage taken -1%', [2] = 'Geomancy Skill +10', [3] = 'Indi. eff. dur. +15' } },
-    },
+        },
+	LifeCycle = {
+		Body = 'Geo. Tunic +1',
+	},
+	Bolster = {
+		Body = { Name = 'Bagua Tunic +1', AugTrial=5331 },
+	},
 };
 profile.Sets = sets;
 
@@ -176,6 +181,12 @@ profile.HandleDefault = function()
 end
 
 profile.HandleAbility = function()
+	local act = gData.GetAction();
+	if (act.Name == "Life Cycle") then
+        gFunc.EquipSet(profile.Sets.LifeCycle);
+	elseif (act.Name == "Bolster") then
+		gFunc.EquipSet(profile.Sets.Bolster);
+    end
 end
 
 profile.HandleItem = function()
@@ -232,7 +243,7 @@ profile.HandleWeaponskill = function()
 	local act = gData.GetAction();
 	if (act.Name == "Black Halo" or act.Name == "Realmrazer") then
         gFunc.EquipSet(profile.Sets.WSMulti);
-    elseif (act.Name == "Brainshaker" or act.Name == "Skullbreaker" or act.Name == "Rock Crusher" or act.Name == "Vidohunir" or act.Name == "Myrkr" or act.Name == "Shattersoul") then
+    elseif (act.Name == "Brainshaker" or act.Name == "Skullbreaker" or act.Name == "Rock Crusher" or act.Name == "Myrkr" or act.Name == "Shattersoul") then
         gFunc.EquipSet(profile.Sets.WSMab);
     else
         gFunc.EquipSet(profile.Sets.WS);
