@@ -19,6 +19,7 @@ local sets = {
     },
 	Nuke = {
 		Neck = 'Mizu. Kubikazari',
+		Ammo = { Name = 'Ghastly Tathlum +1', AugPath='A' },
 	},
     Movement = {
         Feet = 'Geo. Sandals +2',
@@ -63,7 +64,6 @@ local sets = {
         Back = { Name = 'Fi Follet Cape +1', AugPath='A' },
         Waist = 'Embla Sash',
         Legs = 'Doyen pants',
-        Feet = 'Acad. Loafers +1',
     },
 	Enhancing = {
         Main = { Name = 'Serenity', Augment = { [1] = '"Cure" spellcasting time -9%', [2] = 'Enha.mag. skill +8', [3] = 'MP+50', [4] = '"Cure" potency +3%' } },
