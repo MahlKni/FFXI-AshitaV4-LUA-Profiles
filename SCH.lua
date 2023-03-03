@@ -103,6 +103,7 @@ local sets = {
         Ring1 = 'Excelsis Ring',
 		Waist = 'Fucho-no-Obi',
 		Ear2 = { Name = 'Arbatel Earring', Augment = 'Mag. Acc.+6' },
+		Neck = 'Erra Pendant',
     },
 	Sub = {
 		Head = 'Acad. Mortar. +1',

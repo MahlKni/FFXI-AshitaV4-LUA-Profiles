@@ -86,6 +86,7 @@ local sets = {
 	Drain = {
         Main = { Name = 'Rubicundity', Augment = { [1] = 'Dark magic skill +1', [2] = '"Conserve MP"+2', [3] = 'Mag. Acc.+5' } },
         Sub = 'Culminus',
+		Neck = 'Erra Pendant',
         Ring1 = 'Excelsis Ring',
 		Ring2 = 'Archon Ring',
 		Waist = 'Fucho-no-Obi',

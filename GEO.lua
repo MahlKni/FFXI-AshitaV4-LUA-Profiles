@@ -5,7 +5,7 @@ local sets = {
         Sub = 'Culminus',
         Range = { Name = 'Dunna', AugPath='A' },
         Head = 'Azimuth Hood +2',
-        Neck = 'Sibyl scarf',
+        Neck = { Name = 'Loricate Torque +1', AugPath='A' },
         Ear1 = 'Barkaro. Earring',
         Ear2 = { Name = 'Azimuth Earring +1', Augment = { [1] = 'Damage taken-4%', [2] = 'Mag. Acc.+12' } },
         Body = 'Bagua Tunic +1',
@@ -19,7 +19,11 @@ local sets = {
     },
 	Nuke = {
 		Neck = 'Mizu. Kubikazari',
+		Body = { Name = 'Merlinic Jubbah', Augment = { [1] = '"Mag. Atk. Bns."+14', [2] = 'Magic burst dmg.+11%', [3] = 'Mag. Acc.+13' } },
+		Head = { Name = 'Merlinic Hood', Augment = { [1] = 'Magic burst dmg.+11%', [2] = '"Mag. Atk. Bns."+24' } },
 		Ammo = { Name = 'Ghastly Tathlum +1', AugPath='A' },
+		Ring1 = 'Mujin Band',
+		Waist = 'Hachirin-no-Obi',
 	},
     Movement = {
         Feet = 'Geo. Sandals +2',
@@ -85,7 +89,9 @@ local sets = {
 	Drain = {
         Main = { Name = 'Rubicundity', Augment = { [1] = 'Dark magic skill +1', [2] = '"Conserve MP"+2', [3] = 'Mag. Acc.+5' } },
         Sub = 'Culminus',
+		Neck = 'Erra Pendant',
         Ring1 = 'Excelsis Ring',
+		Ring2 = 'Archon Ring',
 		Waist = 'Fucho-no-Obi',
     },
 	Cure = {
@@ -204,11 +210,14 @@ profile.HandleMidcast = function()
 	if (string.contains(spell.Name, 'Indi-') or string.contains(spell.Name, 'Geo-')) then
 		gFunc.EquipSet(sets.Geo);
 		end
+		
 	if (spell.Skill == 'Healing Magic') then
         gFunc.EquipSet(sets.Cure);
         if string.match(spell.Name, 'Cursna') then
             gFunc.EquipSet(sets.Cursna);
         end
+	end
+	
 	if (spell.Skill == 'Enhancing Magic') then
         gFunc.EquipSet(sets.Enhancing);
         if string.match(spell.Name, 'Phalanx') then
@@ -218,20 +227,22 @@ profile.HandleMidcast = function()
         elseif string.contains(spell.Name, 'Regen') then
             gFunc.EquipSet(sets.Regen);
         end
-    elseif (spell.Skill == 'Elemental Magic') then
+		end
+		
+    if (spell.Skill == 'Elemental Magic') then
         gFunc.EquipSet(sets.Nuke);
 		if (Settings.Burst == true) then
             gFunc.EquipSet(sets.Burst);
         end
-    elseif (spell.Skill == 'Enfeebling Magic') then
+		end
+		
+	if (spell.Skill == 'Enfeebling Magic' or spell.Skill == 'Dark Magic' ) then
         gFunc.EquipSet(sets.Enfeebling);
-    elseif (spell.Skill == 'Dark Magic') then
-        gFunc.EquipSet(sets.Enfeebling); -- mostly macc anyways
-        if (string.contains(spell.Name, 'Aspir') or string.contains(spell.Name, 'Drain')) then
+		if (string.contains(spell.Name, 'Aspir') or string.contains(spell.Name, 'Drain')) then
             gFunc.EquipSet(sets.Drain);
 		end
 	end
-	end
+	
 end
 
 profile.HandlePreshot = function()

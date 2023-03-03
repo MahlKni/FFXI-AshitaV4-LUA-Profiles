@@ -14,7 +14,7 @@ profile.Sets = {
         Ring2 = 'Meghanada Ring',
         Back = { Name = 'Pastoralist\'s Mantle', Augment = { [1] = 'Pet: Rng. Acc.+10', [2] = 'STR+3', [3] = 'Accuracy+2', [4] = 'Pet: Accuracy+10', [5] = 'DEX+3' } },
         Waist = 'Hurch\'lan Sash',
-        Legs = 'Tot. Trousers +2',
+        Legs = 'Tali\'ah Sera. +2',
         Feet = { Name = 'Valorous Greaves', Augment = { [1] = 'Attack+11', [2] = 'Weapon skill damage +5%' } },
     },
     Ready = {
@@ -22,8 +22,9 @@ profile.Sets = {
     PetAtk = {
 		Ear1 = 'Hija Earring',
 		Head = 'Tali\'ah Turban +1',
-		Body = 'Tali\'ah Manteel +1',
+		Body = 'Tali\'ah Manteel +2',
 		Hands = 'Tali\'ah Gages +1',
+		Legs = 'Tali\'ah Sera. +2',
 		Feet = 'Tali\'ah Crackows +1',
 		
     },
@@ -82,6 +83,7 @@ profile.Sets = {
 		Main = { Name = 'Arktoi', AugPath='A' },
 		Sub = 'Kaidate',
         Range = 'Killer Shortbow',
+		Legs = 'Tot. Trousers +2',
         Head = { Name = 'Ankusa Helm +1', AugTrial=5270 },
 	},
 	Spur = {
@@ -122,6 +124,9 @@ end
 
 profile.OnLoad = function()
     gSettings.AllowAddSet = true;
+	local player = gData.GetPlayer();
+	
+	if (player.SubJob == "DNC" ) then
 	(function()
     AshitaCore:GetChatManager():QueueCommand(1, '/macro book 3');
     coroutine.sleep(0.1);
@@ -131,6 +136,17 @@ profile.OnLoad = function()
 	coroutine.sleep(0.5);
 	AshitaCore:GetChatManager():QueueCommand(1, '/sl blink');
 	end):once(1); --This calls the function after 1 second
+	elseif (player.SubJob == "NIN" ) then
+	(function()
+    AshitaCore:GetChatManager():QueueCommand(1, '/macro book 10');
+    coroutine.sleep(0.1);
+    AshitaCore:GetChatManager():QueueCommand(1, '/macro set 1');
+	coroutine.sleep(0.2);
+	AshitaCore:GetChatManager():QueueCommand(1, '/lockstyleset 11');
+	coroutine.sleep(0.5);
+	AshitaCore:GetChatManager():QueueCommand(1, '/sl blink');
+	end):once(1); --This calls the function after 1 second
+	end
 end
 
 profile.OnUnload = function()
