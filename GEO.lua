@@ -21,6 +21,7 @@ local sets = {
 		Neck = 'Mizu. Kubikazari',
 		Body = { Name = 'Merlinic Jubbah', Augment = { [1] = '"Mag. Atk. Bns."+14', [2] = 'Magic burst dmg.+11%', [3] = 'Mag. Acc.+13' } },
 		Head = { Name = 'Merlinic Hood', Augment = { [1] = 'Magic burst dmg.+11%', [2] = '"Mag. Atk. Bns."+24' } },
+		Hands = 'Bagua Mitaines +3',
 		Ammo = { Name = 'Ghastly Tathlum +1', AugPath='A' },
 		Ring1 = 'Mujin Band',
 		Waist = 'Hachirin-no-Obi',
@@ -56,6 +57,9 @@ local sets = {
 		Waist = 'Fotia Belt',
 		Ammo = 'Oshasha\'s Treatise',
 	},
+	ElePrecast = {
+		Hands = 'Bagua Mitaines +3',
+    },
 	Precast = {
         Head = 'Nahtirah Hat',
         Neck = 'Voltsurge Torque',
@@ -86,12 +90,16 @@ local sets = {
 	Cursna = {
 		Feet = 'Gende. Galosh. +1',
 	},
+	Enfeebling = {
+		Hands = 'Azimuth Gloves +1',
+	},
 	Drain = {
         Main = { Name = 'Rubicundity', Augment = { [1] = 'Dark magic skill +1', [2] = '"Conserve MP"+2', [3] = 'Mag. Acc.+5' } },
         Sub = 'Culminus',
 		Neck = 'Erra Pendant',
         Ring1 = 'Excelsis Ring',
 		Ring2 = 'Archon Ring',
+		Legs = 'Azimuth Tights +1',
 		Waist = 'Fucho-no-Obi',
     },
 	Cure = {
@@ -123,6 +131,9 @@ local sets = {
 	Bolster = {
 		Body = { Name = 'Bagua Tunic +1', AugTrial=5331 },
 	},
+	asleep = {
+        Main = 'Prime Maul',      
+    },
 };
 profile.Sets = sets;
 
@@ -202,6 +213,9 @@ end
 profile.HandlePrecast = function()
 	local spell = gData.GetAction();
 	gFunc.EquipSet(sets.Precast);
+	if (spell.Skill == 'Elemental Magic') then
+	gFunc.EquipSet(sets.ElePrecast);
+	end
 end
 
 profile.HandleMidcast = function()

@@ -20,13 +20,14 @@ local sets = {
 	Burst = { 
 		Ear1 = 'Friomisi earring',
 		Ear2 = 'Hermetic Earring',
+		Head = 'Mochi. Hatsuburi +3',
 		Neck = 'Sibyl Scarf',
 		Ring1 = 'Mujin Band',
 		Body = 'Samnuha Coat',
 		Waist = 'Eschan Stone',
 		Hands = 'Hattori tekko +2',
 		Feet = 'Hattori kyahan +2',
-		Ammo = 'Seeth. bomblet +1',
+		Ammo = { Name = 'Ghastly Tathlum +1', AugPath='A' },
 		},
 	dt = {
 		Neck = { Name = 'Loricate Torque +1', AugPath='A' },
