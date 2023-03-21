@@ -14,7 +14,7 @@ local sets = {
         Ring2 = 'Rajas Ring',
         Back = { Name = 'Yokaze Mantle', Augment = { [1] = 'STR+5', [2] = 'Sklchn.dmg.+4%', [3] = 'DEX+1' } },
         Waist = 'Chiner\'s Belt +1',
-        Legs = 'Hattori Hakama +2',
+        Legs = { Name = 'Tatena. Haidate +1', AugPath='A' },
         Feet = { Name = 'Tatena. Sune. +1', AugPath='A' },
     },
 	Burst = { 
@@ -31,7 +31,8 @@ local sets = {
 		},
 	dt = {
 		Neck = { Name = 'Loricate Torque +1', AugPath='A' },
-		Ring1 = 'Defending ring'
+		Ring1 = 'Defending ring',
+		Legs = 'Hattori Hakama +2',
 	},
     Movement = {
         Feet = 'Danzo Sune-Ate',
