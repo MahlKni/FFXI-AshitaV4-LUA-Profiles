@@ -15,7 +15,7 @@ local sets = {
         Back = { Name = 'Lifestream Cape', Augment = { [1] = 'Pet: Damage taken -1%', [2] = 'Geomancy Skill +10', [3] = 'Indi. eff. dur. +15' } },
         Waist = 'Isa Belt',
         Legs = 'Mallquis Trews +2',
-        Feet = 'Geo. Sandals +2',
+        Feet = 'Azimuth Gaiters +2',
     },
 	Nuke = {
 		Neck = 'Mizu. Kubikazari',
@@ -122,7 +122,7 @@ local sets = {
         Ear2 = { Name = 'Azimuth Earring +1', Augment = { [1] = 'Damage taken-4%', [2] = 'Mag. Acc.+12' } },
         Body = { Name = 'Bagua Tunic +1', AugTrial=5331 },
         Hands = 'Geo. Mitaines +2',
-        Feet = 'Azimuth Gaiters +1',
+        Feet = 'Azimuth Gaiters +2',
         Back = { Name = 'Lifestream Cape', Augment = { [1] = 'Pet: Damage taken -1%', [2] = 'Geomancy Skill +10', [3] = 'Indi. eff. dur. +15' } },
         },
 	LifeCycle = {
