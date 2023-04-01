@@ -4,7 +4,7 @@ local sets = {
         Main = { Name = 'Enchufla', AugPath='C' },
         Sub = { Name = 'Ternion Dagger +1', AugPath='A' },
         Ammo = 'Ginsen',
-        Head = 'Maculele tiara +1',
+        Head = 'Maculele tiara +2',
         Neck = 'Anu Torque',
         Ear1 = 'Sherida Earring',
         Ear2 = 'Assuage Earring',
@@ -33,9 +33,12 @@ local sets = {
 		Head = 'Maxixi Tiara +2',
 	},
 	
+	['Jig'] = {
+		Legs = 'Horos Tights',
+	},
+	
 	WSMulti = {
 		Ear1 = { Name = 'Moonshade Earring', Augment = { [1] = 'TP Bonus +250', [2] = '"Mag. Atk. Bns."+4' }},
-		Head = { Name = 'Herculean Helm', Augment = { [1] = 'Weapon skill damage +6%', [2] = 'Rng.Acc.+21', [3] = 'CHR+10', [4] = 'Attack+3', [5] = 'Accuracy+3' } },
 		Neck = 'Fotia Gorget',
 		Hands = 'Meg. Gloves +2',
 		Ammo = 'Oshasha\'s Treatise',
@@ -44,14 +47,12 @@ local sets = {
 	WSMab = {
         Ear1 = { Name = 'Moonshade Earring', Augment = { [1] = 'TP Bonus +250', [2] = '"Mag. Atk. Bns."+4' } },
 		Neck = 'Fotia Gorget',
-		Head = { Name = 'Herculean Helm', Augment = { [1] = 'Weapon skill damage +6%', [2] = 'Rng.Acc.+21', [3] = 'CHR+10', [4] = 'Attack+3', [5] = 'Accuracy+3' } },
 		Ammo = 'Oshasha\'s Treatise',
         Hands = 'Meg. Gloves +2',
 		Waist = 'Fotia Belt',
         },
 	WS = {
 		Ear1 = { Name = 'Moonshade Earring', Augment = { [1] = 'TP Bonus +250', [2] = '"Mag. Atk. Bns."+4' } },
-		Head = { Name = 'Herculean Helm', Augment = { [1] = 'Weapon skill damage +6%', [2] = 'Rng.Acc.+21', [3] = 'CHR+10', [4] = 'Attack+3', [5] = 'Accuracy+3' } },
 		Neck = 'Fotia Gorget',
 		Ammo = 'Oshasha\'s Treatise',
 		Hands = 'Meg. Gloves +2',
@@ -79,7 +80,7 @@ profile.OnLoad = function()
     coroutine.sleep(0.1);
     AshitaCore:GetChatManager():QueueCommand(1, '/macro set 1');
 	coroutine.sleep(0.2);
-	AshitaCore:GetChatManager():QueueCommand(1, '/lockstyleset 11');
+	AshitaCore:GetChatManager():QueueCommand(1, '/lockstyleset 9');
 	coroutine.sleep(0.5);
 	AshitaCore:GetChatManager():QueueCommand(1, '/sl blink');
 	end):once(1); --This calls the function after 1 second
@@ -119,6 +120,8 @@ profile.HandleAbility = function()
 		gFunc.EquipSet(sets.Waltz);
 	elseif (string.contains(act.Name, 'Samba')) then
 		gFunc.EquipSet(sets.Samba);
+	elseif (string.contains(act.Name, 'Jig')) then
+		gFunc.EquipSet(sets.Jig);
 	elseif (act.Name == "Climactic Flourish") then
         gFunc.EquipSet(sets.CF);
     end
