@@ -1,13 +1,17 @@
 local profile = {};
+
+local handleFishMode = gFunc.LoadFile('common/fishMode.lua')
+local handleHelmMode = gFunc.LoadFile('common/helmMode.lua')
+
 local sets = {
     ['Idle'] = {
         Main = { Name = 'Enchufla', AugPath='C' },
         Sub = { Name = 'Ternion Dagger +1', AugPath='A' },
         Ammo = 'Ginsen',
-        Head = 'Maculele tiara +2',
+        Head = 'Maculele Tiara +2',
         Neck = 'Anu Torque',
         Ear1 = 'Sherida Earring',
-        Ear2 = 'Assuage Earring',
+        Ear2 = { Name = 'Maculele Earring', Augment = { [1] = 'Accuracy+10', [2] = 'Mag. Acc.+10' } },
         Body = 'Malignance Tabard',
         Hands = 'Meg. Gloves +2',
         Ring1 = 'Meghanada Ring',
@@ -24,6 +28,12 @@ local sets = {
 		Feet = { Name = 'Herculean Boots', Augment = { [1] = 'Accuracy+5', [2] = '"Treasure Hunter"+2', [3] = 'Attack+4', [4] = '"Mag. Atk. Bns."+23' } },
 	},
 	
+	DT = {
+		Neck = { Name = 'Loricate Torque +1', AugPath='A' },
+		Ring1 = 'Defending Ring',
+		Ring2 = 'Warden\'s Ring',
+	},
+	
 	['Waltz'] = {
         Body = 'Maxixi Casaque +1',
         Feet = 'Rawhide Boots',
@@ -35,6 +45,10 @@ local sets = {
 	
 	['Jig'] = {
 		Legs = 'Horos Tights',
+	},
+	
+	['NFR'] = {
+		Body = 'Horos casaque +1',
 	},
 	
 	WSMulti = {
@@ -71,11 +85,18 @@ profile.Packer = {
 };
 
 local Settings = {
-    UseTH = false
+    UseTH = false,
+	UseDT = false,
+	FishMode = false,
+	HelmMode = false
 };
 profile.OnLoad = function()
     gSettings.AllowAddSet = true;
-		(function()
+	
+	AshitaCore:GetChatManager():QueueCommand(-1, '/alias add /fishe /lac fwd fish')
+    AshitaCore:GetChatManager():QueueCommand(-1, '/alias add /helm /lac fwd helm')
+	
+	(function()
     AshitaCore:GetChatManager():QueueCommand(1, '/macro book 9');
     coroutine.sleep(0.1);
     AshitaCore:GetChatManager():QueueCommand(1, '/macro set 1');
@@ -87,6 +108,12 @@ profile.OnLoad = function()
 end
 
 profile.OnUnload = function()
+	handleFishMode('fish off')
+    handleHelmMode('helm off')
+
+    
+    AshitaCore:GetChatManager():QueueCommand(-1, '/alias del /fishe')
+    AshitaCore:GetChatManager():QueueCommand(-1, '/alias del /helm')
 end
 
 profile.HandleCommand = function(args)
@@ -96,7 +123,16 @@ profile.HandleCommand = function(args)
         else
             Settings.UseTH = true;
         end
+	elseif (args[1] == 'DT') then
+		if (Settings.UseDT == true) then
+            Settings.UseDT = false;
+        else
+            Settings.UseDT = true;
+        end
     end
+	
+	handleFishMode(args)
+    handleHelmMode(args)
 end
 
 profile.HandleDefault = function()
@@ -106,6 +142,8 @@ local player = gData.GetPlayer();
         gFunc.EquipSet(sets.Idle);
 		if (Settings.UseTH == true) then
             gFunc.EquipSet(sets.TH);
+		elseif (Settings.UseDT == true) then
+            gFunc.EquipSet(sets.DT);
         end
     elseif (player.Status == 'Resting') then
         gFunc.EquipSet(sets.Resting);
@@ -124,6 +162,8 @@ profile.HandleAbility = function()
 		gFunc.EquipSet(sets.Jig);
 	elseif (act.Name == "Climactic Flourish") then
         gFunc.EquipSet(sets.CF);
+	elseif (act.Name == "No Foot Rise") then
+        gFunc.EquipSet(sets.NFR);
     end
 end
 
