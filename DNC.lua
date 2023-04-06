@@ -35,16 +35,19 @@ local sets = {
 	},
 	
 	['Waltz'] = {
+		Head = 'Horos Tiara +1',
         Body = 'Maxixi Casaque +1',
-        Feet = 'Rawhide Boots',
+        Feet = 'Maxixi Toe Shoes +1',
     },
 	
 	['Samba'] = {
 		Head = 'Maxixi Tiara +2',
+		Back = 'Senuna\'s mantle',
 	},
 	
 	['Jig'] = {
 		Legs = 'Horos Tights',
+		Feet = 'Maxixi Toe Shoes +1',
 	},
 	
 	['NFR'] = {
@@ -61,6 +64,7 @@ local sets = {
 	WSMab = {
         Ear1 = { Name = 'Moonshade Earring', Augment = { [1] = 'TP Bonus +250', [2] = '"Mag. Atk. Bns."+4' } },
 		Neck = 'Fotia Gorget',
+		Ear2 = 'Friomisi Earring',
 		Ammo = 'Oshasha\'s Treatise',
         Hands = 'Meg. Gloves +2',
 		Waist = 'Fotia Belt',
@@ -92,10 +96,6 @@ local Settings = {
 };
 profile.OnLoad = function()
     gSettings.AllowAddSet = true;
-	
-	AshitaCore:GetChatManager():QueueCommand(-1, '/alias add /fishe /lac fwd fish')
-    AshitaCore:GetChatManager():QueueCommand(-1, '/alias add /helm /lac fwd helm')
-	
 	(function()
     AshitaCore:GetChatManager():QueueCommand(1, '/macro book 9');
     coroutine.sleep(0.1);
@@ -105,6 +105,11 @@ profile.OnLoad = function()
 	coroutine.sleep(0.5);
 	AshitaCore:GetChatManager():QueueCommand(1, '/sl blink');
 	end):once(1); --This calls the function after 1 second
+	
+	AshitaCore:GetChatManager():QueueCommand(-1, '/alias add /fishe /lac fwd fish')
+    AshitaCore:GetChatManager():QueueCommand(-1, '/alias add /helm /lac fwd helm')
+	
+	
 end
 
 profile.OnUnload = function()
