@@ -23,6 +23,7 @@ local sets = {
 		Head = 'Mochi. Hatsuburi +3',
 		Neck = 'Sibyl Scarf',
 		Ring1 = 'Mujin Band',
+		Ring2 = 'Dingir ring',
 		Body = 'Samnuha Coat',
 		Waist = 'Eschan Stone',
 		Hands = 'Hattori tekko +2',

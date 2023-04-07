@@ -11,7 +11,7 @@ local sets = {
         Body = 'Runeist\'s coat +2',
         Hands = 'Regal Gauntlets',
         Ring1 = 'Defending Ring',
-        Ring2 = 'Warden\'s Ring',
+        Ring2 = 'Niqmaddu Ring',
         Back = { Name = 'Ogma\'s Cape', Augment = { [1] = 'Parrying rate+5%', [2] = 'Enmity+10', [3] = 'Eva.+20', [4] = 'Mag. Evasion+10', [5] = 'HP+60', [6] = 'Mag. Eva.+20' } },
         Waist = 'Chiner\'s Belt +1',
         Legs = 'Eri. Leg Guards +1',

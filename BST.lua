@@ -7,7 +7,7 @@ profile.Sets = {
         Head = { Name = 'Valorous Mask', Augment = { [1] = '"Dbl.Atk."+2', [2] = 'Weapon skill damage +8%', [3] = 'Accuracy+20', [4] = 'Attack+20', [5] = 'Pet: VIT+6' } },
         Neck = 'Anu Torque',
         Ear1 = 'Sherida Earring',
-        Ear2 = 'Nukumi Earring',
+        Ear2 = 'Enmerkar Earring',
         Body = 'Malignance Tabard',
         Hands = 'Nukumi Manoplas +1',
         Ring1 = 'Tali\'ah Ring',
@@ -76,8 +76,11 @@ profile.Sets = {
 		Back = { Name = 'Artio\'s Mantle', Augment = { [1] = 'Pet: M.Acc.+20', [2] = 'Pet: M.Dmg.+20', [3] = 'Mag. Acc+7', [4] = 'Weapon skill damage +10%', [5] = 'Magic Damage +7' } },
 		Feet = 'Tot. Gaiters +2',
     },
-    CallBeast = {
-		Hands = 'Ankusa Gloves +1',
+    ['CallBeast'] = {
+		Ear2 = { Name = 'Nukumi Earring', Augment = { [1] = 'Accuracy+6', [2] = 'Mag. Acc.+6' } },
+		Body = 'Malignance Tabard',
+		Hands = { Name = 'Ankusa Gloves +1', AugTrial=5272 },
+        
     },
 	Killer = {
 		Main = { Name = 'Arktoi', AugPath='A' },
@@ -99,7 +102,8 @@ profile.Sets = {
         Ammo = 'Per. Lucky Egg',
         Waist = 'Chaac Belt',
 		}
-};
+,
+    };
 
 
 profile.Packer = {
