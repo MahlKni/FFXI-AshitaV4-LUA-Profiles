@@ -35,10 +35,13 @@ local sets = {
 		Back = 'Felicitas cape +1',
 		Ear1 = 'Relaxing earring',
     },
-    dt = {
+    DT = {
         Main = 'Malignance Pole',
-		Neck = 'Loricate torque +1',
-        Ring2 = 'Defending Ring',
+		Sub = 'Tokko grip',
+		Neck = { Name = 'Loricate Torque +1', AugPath='A' },
+        Ring1 = 'Defending Ring',
+		Ring2 = 'Warden\'s Ring',
+		Waist = 'Plat. Mog. Belt',
     },
 	Movement = {
         Feet = 'Herald\'s Gaiters',

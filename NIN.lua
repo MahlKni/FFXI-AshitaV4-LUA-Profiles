@@ -7,7 +7,7 @@ local sets = {
         Head = 'Hattori Zukin +2',
         Neck = 'Erudit. Necklace',
         Ear1 = 'Cessance Earring',
-        Ear2 = { Name = 'Hattori Earring', Augment = { [1] = 'Accuracy+6', [2] = 'Mag. Acc.+6' } },
+        Ear2 = { Name = 'Hattori Earring', Augment = { [1] = 'Accuracy+7', [2] = 'Mag. Acc.+7' } },
         Body = 'Hattori Ningi +2',
         Hands = { Name = 'Tatena. Gote +1', AugPath='A' },
         Ring1 = 'Hizamaru Ring',
@@ -31,9 +31,11 @@ local sets = {
 		Ammo = { Name = 'Ghastly Tathlum +1', AugPath='A' },
 		},
 	dt = {
-		Neck = { Name = 'Loricate Torque +1', AugPath='A' },
-		Ring1 = 'Defending ring',
 		Legs = 'Hattori Hakama +2',
+		Neck = { Name = 'Loricate Torque +1', AugPath='A' },
+        Ring1 = 'Defending Ring',
+		Ring2 = 'Warden\'s Ring',
+		Waist = 'Plat. Mog. Belt',
 	},
     Movement = {
         Feet = 'Danzo Sune-Ate',

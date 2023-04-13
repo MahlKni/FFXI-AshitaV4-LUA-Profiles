@@ -14,8 +14,8 @@ local sets = {
         Ring2 = 'Rajas Ring',
         Back = 'Toutatis\'s Cape',
         Waist = 'Chiner\'s Belt +1',
-        Legs = { Name = 'Samnuha Tights', Augment = { [1] = 'STR+5', [2] = '"Triple Atk."+1', [3] = 'DEX+5' } },
-        Feet = { Name = 'Herculean Boots', Augment = { [1] = 'Weapon Skill Acc.+9', [2] = 'Attack+6', [3] = '"Store TP"+5', [4] = 'Accuracy+6' } },
+        Legs = 'Meg. Chausses +2',
+        Feet = { Name = 'Herculean Boots', Augment = { [1] = 'Accuracy+25', [2] = 'Weapon skill damage +4%', [3] = 'Attack+24', [4] = 'DEX+3' } },
     },
 	Movement = {
         Feet = 'Skd. Jambeaux +1',
@@ -23,10 +23,13 @@ local sets = {
 	
 	TH = { 
 		Feet = 'Skulk. Poulaines +1',
-		Hands = 'Plun. Armlets +1',
 		Ammo = 'Per. Lucky Egg',
 		Waist = 'Chaac Belt',
 	},
+	
+	asleep = {
+        Main = 'Mpu Gandring',      
+    },
 	
 	WSMulti = {
 		Ear1 = { Name = 'Moonshade Earring', Augment = { [1] = 'TP Bonus +250', [2] = '"Mag. Atk. Bns."+4' }},
@@ -58,6 +61,12 @@ local sets = {
 		Ring1 = 'Orvail ring +1',
 		Ring2 = 'Craftmaster\'s ring',
 		},
+	DT = {
+		Neck = { Name = 'Loricate Torque +1', AugPath='A' },
+		Ring1 = 'Defending Ring',
+		Ring2 = 'Warden\'s Ring',
+		Waist = 'Plat. Mog. Belt',
+	},
 };
 profile.Sets = sets;
 

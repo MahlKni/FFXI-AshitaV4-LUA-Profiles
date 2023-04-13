@@ -17,6 +17,14 @@ local sets = {
         Legs = { Name = 'Telchine Braconi', Augment = '"Regen" potency+3' },
         Feet = { Name = 'Telchine Pigaches', Augment = '"Regen" potency+3' },
     },
+	DT = {
+        Main = 'Malignance Pole',
+		Sub = 'Tokko grip',
+		Neck = { Name = 'Loricate Torque +1', AugPath='A' },
+        Ring1 = 'Defending Ring',
+		Ring2 = 'Warden\'s Ring',
+		Waist = 'Plat. Mog. Belt',
+    },
 	Precast = {
         Head = 'Nahtirah Hat',
         Neck = 'Voltsurge Torque',

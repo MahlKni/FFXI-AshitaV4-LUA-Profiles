@@ -11,14 +11,14 @@ local sets = {
         Head = 'Maculele Tiara +2',
         Neck = 'Anu Torque',
         Ear1 = 'Sherida Earring',
-        Ear2 = { Name = 'Maculele Earring', Augment = { [1] = 'Accuracy+10', [2] = 'Mag. Acc.+10' } },
+        Ear2 = { Name = 'Macu. Earring +1', Augment = { [1] = 'Accuracy+13', [2] = '"Store TP"+4', [3] = 'Mag. Acc.+13' } },
         Body = 'Malignance Tabard',
         Hands = 'Meg. Gloves +2',
         Ring1 = 'Meghanada Ring',
         Ring2 = 'Rajas Ring',
-        Back = 'Sokolski Mantle',
+        Back = { Name = 'Toetapper Mantle', Augment = { [1] = '"Rev. Flourish"+15', [2] = '"Store TP"+3', [3] = '"Dual Wield"+2' } },
         Waist = 'Eschan Stone',
-        Legs = { Name = 'Samnuha Tights', Augment = { [1] = 'STR+5', [2] = '"Triple Atk."+1', [3] = 'DEX+5' } },
+        Legs = 'Meg. Chausses +2',
         Feet = { Name = 'Horos T. Shoes +3', AugTrial=5556 },
     },
 	
@@ -32,11 +32,13 @@ local sets = {
 		Neck = { Name = 'Loricate Torque +1', AugPath='A' },
 		Ring1 = 'Defending Ring',
 		Ring2 = 'Warden\'s Ring',
+		Waist = 'Plat. Mog. Belt',
 	},
 	
 	['Waltz'] = {
 		Head = 'Horos Tiara +1',
         Body = 'Maxixi Casaque +1',
+		Back = { Name = 'Toetapper Mantle', Augment = { [1] = '"Rev. Flourish"+15', [2] = '"Store TP"+3', [3] = '"Dual Wield"+2' } },
         Feet = 'Maxixi Toe Shoes +1',
     },
 	
@@ -46,7 +48,7 @@ local sets = {
 	},
 	
 	['Jig'] = {
-		Legs = 'Horos Tights',
+		Legs = 'Horos Tights +1',
 		Feet = 'Maxixi Toe Shoes +1',
 	},
 	
@@ -60,6 +62,8 @@ local sets = {
 		Hands = 'Meg. Gloves +2',
 		Ammo = 'Oshasha\'s Treatise',
 		Waist = 'Fotia Belt',
+		Legs = 'Meg. Chausses +2',
+		Feet = { Name = 'Herculean Boots', Augment = { [1] = 'Accuracy+25', [2] = 'Weapon skill damage +4%', [3] = 'Attack+24', [4] = 'DEX+3' } },
 	},
 	WSMab = {
         Ear1 = { Name = 'Moonshade Earring', Augment = { [1] = 'TP Bonus +250', [2] = '"Mag. Atk. Bns."+4' } },
@@ -68,19 +72,29 @@ local sets = {
 		Ammo = 'Oshasha\'s Treatise',
         Hands = 'Meg. Gloves +2',
 		Waist = 'Fotia Belt',
+		Legs = 'Maxixi Tights +2',
+		Feet = { Name = 'Herculean Boots', Augment = { [1] = 'Accuracy+25', [2] = 'Weapon skill damage +4%', [3] = 'Attack+24', [4] = 'DEX+3' } },
         },
-	WS = {
-		Ear1 = { Name = 'Moonshade Earring', Augment = { [1] = 'TP Bonus +250', [2] = '"Mag. Atk. Bns."+4' } },
-		Neck = 'Fotia Gorget',
-		Ammo = 'Oshasha\'s Treatise',
-		Hands = 'Meg. Gloves +2',
-		Waist = 'Fotia Belt',
-	},
+	['WS'] = {
+        Ammo = 'Oshasha\'s Treatise',
+        Neck = 'Fotia Gorget',
+        Ear1 = { Name = 'Moonshade Earring', Augment = { [1] = 'TP Bonus +250', [2] = '"Mag. Atk. Bns."+4' } },
+        Hands = 'Meg. Gloves +2',
+        Waist = 'Fotia Belt',
+		Legs = 'Maxixi Tights +2',
+        Feet = { Name = 'Herculean Boots', Augment = { [1] = 'Accuracy+25', [2] = 'Weapon skill damage +4%', [3] = 'Attack+24', [4] = 'DEX+3' } },
+    },
 	CF = {
 		Head = 'Maculele Tiara +1',
 	},
+	RF = {
+	Back = { Name = 'Toetapper Mantle', Augment = { [1] = '"Rev. Flourish"+15', [2] = '"Store TP"+3', [3] = '"Dual Wield"+2' } },
+	},
 	Movement = {
         Feet = 'Skd. Jambeaux +1',
+    },
+	asleep = {
+        Main = 'Mpu Gandring',      
     },
 };
 profile.Sets = sets;
@@ -167,6 +181,8 @@ profile.HandleAbility = function()
 		gFunc.EquipSet(sets.Jig);
 	elseif (act.Name == "Climactic Flourish") then
         gFunc.EquipSet(sets.CF);
+		elseif (act.Name == "Reverse Flourish") then
+        gFunc.EquipSet(sets.RF);
 	elseif (act.Name == "No Foot Rise") then
         gFunc.EquipSet(sets.NFR);
     end

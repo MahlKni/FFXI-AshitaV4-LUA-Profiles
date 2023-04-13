@@ -32,8 +32,10 @@ local sets = {
 	DT = {
         Main = 'Malignance Pole',
 		Sub = 'Tokko grip',
-		Neck = 'Loricate torque +1',
-        Ring2 = 'Defending Ring',
+		Neck = { Name = 'Loricate Torque +1', AugPath='A' },
+        Ring1 = 'Defending Ring',
+		Ring2 = 'Warden\'s Ring',
+		Waist = 'Plat. Mog. Belt',
     },
 	TH = { 
 		Ammo = 'Per. Lucky Egg',

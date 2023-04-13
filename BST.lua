@@ -19,6 +19,12 @@ profile.Sets = {
     },
     Ready = {
     },
+	DT = {
+		Neck = { Name = 'Loricate Torque +1', AugPath='A' },
+		Ring1 = 'Defending Ring',
+		Ring2 = 'Warden\'s Ring',
+		Waist = 'Plat. Mog. Belt',
+	},
     PetAtk = {
 		Ear1 = 'Hija Earring',
 		Head = 'Tali\'ah Turban +1',
